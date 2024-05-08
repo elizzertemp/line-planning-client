@@ -50,7 +50,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {/* Render Line Cards */}
           {lineData.map((e, i) => {
-            return <LineCard data={e} key={i} onClick={router.push(`/dashboard/${e._id}`)}></LineCard>;
+            return <LineCard data={e} key={i} onClick={()=>{router.push(`/dashboard/${e._id}`)}}></LineCard>;
           })}
         </div>
       </div>
