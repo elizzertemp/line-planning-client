@@ -6,7 +6,6 @@ export default function lineCard(props) {
   return (
     <div
       className="bg-white-400 p-3 border border-solid border-3 border-black  rounded-lg cursor-pointer"
-      onClick={lineSelectHandler}
     >
       <div>
         <h3 className="text-left">
