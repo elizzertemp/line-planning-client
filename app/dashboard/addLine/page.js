@@ -15,7 +15,7 @@ export default function AddLine() {
     const [token, setToken] = useState("");
 
     useEffect(() => {
-        let token = localStorage.getItem("user-data");
+        let token = window.localStorage.getItem("user-data");
         if (!token) {
             console.log("[+]user not logged in");
             router.push("/login");

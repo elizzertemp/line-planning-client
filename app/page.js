@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const router=useRouter()
-  if(localStorage.getItem("user-data")){
+  if(window.localStorage.getItem("user-data")){
     router.push("/dashboard")
   }else{
     router.push("/login")

@@ -16,7 +16,7 @@ export default function Layout({ children }) {
     }
 
     function logout() {
-        localStorage.removeItem("user-data");
+        window.localStorage.removeItem("user-data");
         router.push("/login");
     }
 

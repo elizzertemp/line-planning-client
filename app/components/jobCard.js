@@ -9,7 +9,7 @@ export default function JobCard(props) {
   const router = useRouter();
 
   function jobDeleteHandler() {
-    let _token = localStorage.getItem("user-data");
+    let _token = window.localStorage.getItem("user-data");
 
     if (!_token) {
       console.error("User not logged in");

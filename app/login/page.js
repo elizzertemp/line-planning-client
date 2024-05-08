@@ -49,7 +49,7 @@ export default function Login() {
         if (res.error) {
           setServerMessage(res.message);
         } else {
-          localStorage.setItem("user-data", JSON.stringify(res.data));
+          window.localStorage.setItem("user-data", JSON.stringify(res.data));
           router.push("/dashboard");
         }
       })

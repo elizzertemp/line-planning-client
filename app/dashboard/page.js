@@ -12,7 +12,7 @@ export default function Dashboard() {
   let token;
 
   useEffect(() => {
-    token = localStorage.getItem("user-data");
+    token = window.localStorage.getItem("user-data");
 
     if (!token) {
       console.log("[+]user not logged in");
