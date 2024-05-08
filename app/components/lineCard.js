@@ -1,12 +1,7 @@
-import { useRouter } from "next/navigation";
 
 export default function lineCard(props) {
 
-const router = useRouter()
 
-  function lineSelectHandler() {
-    router.push(`/dashboard/${props.data._id}`)
-  }
 
   return (
     <div
