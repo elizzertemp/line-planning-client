@@ -84,7 +84,7 @@ export default function LineExpand({ params }) {
           {/* Add other components or buttons if needed */}
         </div>
         {!loading && (
-          <div className="flex flex-col items-center gap-3 m-2">
+          <div className="flex flex-col items-center gap-3 mt-7">
             {jobsList.map((e, i) => {
               return <JobCard data={e} refresh={pageRefresh} key={i} />;
             })}

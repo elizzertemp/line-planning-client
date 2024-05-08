@@ -39,7 +39,7 @@ export default function JobCard(props) {
   }
 
   return (
-    <div className={` text-black rounded-lg border-2 border-solid border-orange-900 p-4 w-4/5`} style={{ backgroundColor: `${props.data.color}` }}>
+    <div className={` text-black rounded-lg border-2 border-solid border-black p-4 w-4/5`} style={{ backgroundColor: "#ffffff" }}>
       <div className="text-lg font-bold text-center">{props.data.jobName}</div>
       <hr />
       <div className="pt-2 pb-2 px-10">
