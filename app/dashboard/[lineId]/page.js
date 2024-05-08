@@ -13,7 +13,10 @@ export default function LineExpand({ params }) {
   const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
-    let token = window.localStorage.getItem("user-data");
+    let token ;
+    if (typeof localStorage !== "undefined") {
+      token = localStorage.getItem("user-data");
+    }
     if (!token) {
       console.log("[+]user not logged in");
       router.push("/login");

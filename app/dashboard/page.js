@@ -12,8 +12,9 @@ export default function Dashboard() {
   let token;
 
   useEffect(() => {
-    token = window.localStorage.getItem("user-data");
-
+    if (typeof localStorage !== "undefined") {
+    token = localStorage.getItem("user-data");
+    }
     if (!token) {
       console.log("[+]user not logged in");
       router.push("/login");

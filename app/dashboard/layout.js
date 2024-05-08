@@ -16,12 +16,15 @@ export default function Layout({ children }) {
     }
 
     function logout() {
-        window.localStorage.removeItem("user-data");
+        if (typeof localStorage !== "undefined") {
+        localStorage.removeItem("user-data");
         router.push("/login");
+        }
     }
 
     useEffect(() => {
         // Check if user data is present in localStorage
+        if (typeof localStorage !== "undefined") {
         const userData = localStorage.getItem("user-data");
         if (!userData) {
             // If not logged in, redirect to login page
@@ -30,7 +33,7 @@ export default function Layout({ children }) {
             // Parse user data and set username
             const { username } = JSON.parse(userData);
             setUsername(username);
-        }
+        }}
     }, []);
 
     return (
